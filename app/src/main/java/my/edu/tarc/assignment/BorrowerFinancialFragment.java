@@ -17,7 +17,8 @@ import android.widget.TextView;
 
 public class BorrowerFinancialFragment extends Fragment {
 
-    TextView monthlyIncome, monthlyExpenses;
+    TextView textViewTotalIncome, textViewTotalExpenses;
+    EditText editTextIncome, editTextBonus, editTextRentalE, editTextHouseholdE, editTextOtherE;
     public BorrowerFinancialFragment(){
 
     }
@@ -27,8 +28,20 @@ public class BorrowerFinancialFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_borrower_financial, container, false);
 
-        monthlyIncome = (TextView)view.findViewById(R.id.textViewTotalIncome);
-        monthlyExpenses = (TextView)view.findViewById(R.id.textViewTotalExpenses);
+        textViewTotalIncome = (TextView)view.findViewById(R.id.textViewTotalIncome);
+        textViewTotalExpenses = (TextView)view.findViewById(R.id.textViewTotalExpenses);
+
+        editTextIncome = (EditText)view.findViewById(R.id.editTextIncome);
+        editTextBonus = (EditText)view.findViewById(R.id.editTextBonus);
+        editTextRentalE = (EditText)view.findViewById(R.id.editTextRental);
+        editTextHouseholdE = (EditText)view.findViewById(R.id.editTextHouseholdExpenses);
+        editTextOtherE = (EditText)view.findViewById(R.id.editTextOtherExpenses);
+
+        final double totalIncome;
+        final double totalExpense;
+
+        totalIncome = Double.parseDouble(editTextIncome.getText().toString()) + Double.parseDouble(editTextBonus.getText().toString());
+        totalExpense = Double.parseDouble(editTextHouseholdE.getText().toString()) + Double.parseDouble(editTextRentalE.getText().toString()) + Double.parseDouble(editTextOtherE.getText().toString());
 
         Button btnNext = (Button)view.findViewById(R.id.buttonBFNext);
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -47,10 +60,8 @@ public class BorrowerFinancialFragment extends Fragment {
                 b.putString("s_name", spouseName);
                 b.putString("s_ic", spouseIC);
 
-                String income = monthlyIncome.getText().toString();
-                b.putString("income", income);
-                String expense = monthlyExpenses.getText().toString();
-                b.putString("expense", expense);
+                b.putDouble("income", totalIncome);
+                b.putDouble("expense", totalExpense);
 
 
                 //AdminMail mail = new AdminMail();

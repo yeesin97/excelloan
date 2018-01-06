@@ -170,25 +170,6 @@
         android:inputType="textEmailAddress"
        />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="386dp"
-        android:text="Nationality: "
-        android:textSize="18dp"
-        android:textColor="@color/black"
-        />
-
-    <Spinner
-        android:id="@+id/spinnerNationality"
-        android:layout_width="214dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="382dp"
-        />
-
     <Button
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"

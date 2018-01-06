@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
         BorrowerDetailFragment bdf = new BorrowerDetailFragment();
         FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
+        FragmentTransaction ft = fm.beginTransaction(); 
         if(id == R.id.nav_home){
             CustomerHome ch = new CustomerHome();
             ft.replace(R.id.frame_container, ch);
