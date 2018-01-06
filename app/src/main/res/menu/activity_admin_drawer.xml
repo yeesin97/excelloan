@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_013_house_outline"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_007_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_005_group"
+            android:title="Customers' Profile" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_003_bars"
+            android:title="Report"/>
+        <item
+            android:id="@+id/nav_view_car_loan"
+            android:icon="@drawable/ic_004_buy_a_car"
+            android:title="View Car Loan" />
+    </group>
+
+    <item android:title="Setting">
+        <menu>
+            <item
+                android:id="@+id/nav_language"
+                android:icon="@drawable/language"
+                android:title="Language" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_012_power_button"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

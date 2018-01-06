@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Assignment</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="termsAndConditions">I/We certify that all information furnished herein is true and correct. The above information is given for the purpose of obtaining credit from ExcelLoan. I/We
+authorize ExcelLoan and its affiliates and subsidiaries to (1) to verify any information contained in this application form and its accompanying documents from, and obtain additional information about
+me/us, including but not limited to my/our personal circumstances, account opening, account balances, present and previous credit transactions/dealings, with government agencies and other
+institutions/individuals, including ExcelLoan’s affiliates and subsidiaries; and (2) conduct, through its representative accredited appraisers, an appraisal of any or all of the collaterals to be used for this
+loan application and directly receive the resulting report for its sole and exclusive use. I/We likewise authorize ExcelLoan’s affiliates and subsidiaries and the institutions/individuals and other sources
+from whom any such information may be obtained and/or verified to provide the necessary data or information to facilitate the processing of my/our application. Further, to avail of the whole spectrum of
+services from ExcelLoan and its subsidiaries, I/we authorize the Bank to share and/or disclose within ExcelLoan Group, any information/data pertaining to my/our
+account/s, application/s for loan, and/or loan/s, which authorization shall exempt the Bank from liability under any and all laws governing the confidentiality of information and privacy of data.
+I/We expressly waive, any and all statutory provisions governing the confidentiality of information and privacy of data, including but not limited to Republic Act Nos. 1405, 6426, 9510 and 10173 and
+expressly authorize ExcelLoan, in case my/our loan application is approved, to submit my/our credit data to the Credit Information Corporation (CIC), in accordance with Republic Act No, 9510, otherwise
+known as the Credit Information System Act. I/We acknowledge and agree that in the conduct of its business of providing services to its clients, ExcelLoan may engage the services of third party service
+providers, including but not limited to its subsidiaries, affiliates, agents, and other persons or entities which the Bank may reasonably select, who may be given access to and/or provided with information
+in connection with or relative to my/our account/s, application for loan, and/or loan/s, with corresponding duty to keep such information confidential. As such, I/we authorize ExcelLoan to give access to
+and/or provide such information as ExcelLoan may deem necessary for the foregoing purpose.
+I/We agree that the application remains ExcelLoan’s property and the same may be used at their discretion whether the credit is granted or not. In case of disapproval of this application, I/we hereby
+understand that ExcelLoan is not obliged to disclose the reason/s for such disapproval. In the event of future delinquency, I/we hereby authorize ExcelLoan to report and/or include my/our name/s in the
+negative listing of any credit bureau or institution.
+I/We authorize ExcelLoan to send me/us updates about my/our loan application via SMS/text, email, mail or other available means of communication.
+I/We fully understand that any misrepresentation or failure to disclose information on my/our part as required herein may cause the disapproval of my/our application or the cancellation of approval, if
+any.</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="register">Register an account</string>
+    <string name="forgot">Forgot your password?</string>
+    <string name="rname">Name (based on IC)</string>
+    <string name="rfemale">Female</string>
+    <string name="rmale">Male</string>
+    <string name="rIC">IC number</string>
+    <string name="rphonenum">Phone Number</string>
+    <string name="remail">Email Address</string>
+    <string name="rretypepassword">Retype Password</string>
+    <string name="rregister">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="gender">Gender</string>
+    <string name="position">Position</string>
+    <string name="forgetpassword">Please enter your username</string>
+    <string name="con">Request PAC</string>
+    <string name="changepassword">Change Password?</string>
+    <string name="pac">Please enter your PAC</string>
+    <string name="enterpac">PAC</string>
+    <string name="confirm">Confirm</string>
+    <string name="newpassword">New Password</string>
+    <string name="retypenewpassword">Retype new password</string>
+    <string name="updatepassword">Update Password</string>
+
+    <string-array name="month">
+        <item>-Select month-</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>-Select year-</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+    </string-array>
+
+    <string-array name="nationality">
+        <item>-Select nationality-</item>
+        <item>Malaysia</item>
+    </string-array>
+
+    <string-array name="loanTerm">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

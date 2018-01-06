@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButtonApplication"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="70dp"
+        android:tooltipText="Loan Application"
+        android:background="@color/colorPrimaryLight1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_018_edit_1"
+         />
+
+    <ImageButton
+        android:id="@+id/imageButtonCProfile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="230dp"
+        android:tooltipText="View Own Profile"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_007_user"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonPayment"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="260dp"
+        android:tooltipText="Make Payment"
+        android:background="@color/colorPrimaryLight"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_009_credit_cards_payment"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonLoan"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="260dp"
+        android:tooltipText="View Car Loan"
+        android:background="@color/colorPrimaryLight1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_004_buy_a_car"
+        />
+
+    <TextView
+        android:id="@+id/textViewApplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="210dp"
+        android:text="Loan Application"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textViewProfile1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="260dp"
+        android:text="Profile"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+       />
+
+    <TextView
+        android:id="@+id/textViewPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="400dp"
+        android:text="Payment"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textViewLoanDetail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="400dp"
+        android:text="View Car Loan"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonCalculator"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="10dp"
+        android:tooltipText="Calculator"
+        style="?android:attr/borderlessButtonStyle"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_017_calculator" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCalendar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="280dp"
+        android:tooltipText="Calendar"
+        android:src="@drawable/ic_016_calendar"
+        android:scaleType="fitCenter"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</FrameLayout>

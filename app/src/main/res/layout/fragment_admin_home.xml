@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButtonAProfile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="110dp"
+        android:background="@color/colorPrimaryLight1"
+        android:src="@drawable/ic_007_user"
+        android:scaleType="fitCenter"
+        android:padding="10dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonACustProfile"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="110dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_005_group"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonALoan"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="290dp"
+        android:background="@color/colorPrimaryLight1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_004_buy_a_car"
+        />
+
+    <TextView
+        android:id="@+id/textViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="245dp"
+        android:text="Profile"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textViewCustProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="245dp"
+        android:text="Customer Profile"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+         />
+
+    <TextView
+        android:id="@+id/textViewReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="425dp"
+        android:text="Report"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textViewLoanDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="425dp"
+        android:text="Loan Detail"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonAReport"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="290dp"
+        android:background="@color/colorPrimaryLight"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_003_bars" />
+
+</FrameLayout>

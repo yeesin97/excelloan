@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewEnterUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgetpassword"
+        android:textColor="@color/black"
+        android:layout_marginTop="82dp"
+        android:layout_marginLeft="65dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextFUsername"
+        android:layout_width="214dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="USERNAME"
+        android:textSize="20dp"
+        android:background="@drawable/edittext_border"
+        android:textAlignment="center"
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="90dp"
+        />
+
+
+    <Button
+        android:id="@+id/buttonFContinue"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="185dp"
+        android:text="@string/con"
+        android:textSize="19dp"
+        android:background="@drawable/register_button_bg"
+        />
+
+    <Button
+        android:id="@+id/buttonFCancel"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="185dp"
+        android:textSize="20dp"
+        android:text="@string/cancel"
+        android:background="@drawable/cancel_button_bg"
+        />
+
+    <TextView
+        android:id="@+id/textViewPAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="280dp"
+        android:text="@string/pac"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <EditText
+        android:id="@+id/editTextPAC"
+        android:layout_width="212dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/enterpac"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:background="@drawable/edittext_border"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="320dp"
+        />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="385dp"
+        android:textSize="20dp"
+        android:text="@string/confirm"
+        android:background="@drawable/register_button_bg"/>
+
+    <Button
+        android:id="@+id/buttonPACCancel"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="385dp"
+        android:text="@string/cancel"
+        android:background="@drawable/cancel_button_bg"/>
+
+</FrameLayout>

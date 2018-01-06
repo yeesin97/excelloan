@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextPACPassword"
+        android:layout_width="212dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edittext_border"
+        android:textSize="20dp"
+        android:ems="10"
+        android:hint="@string/newpassword"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextPACRetypePassword"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="@string/retypenewpassword"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/buttonUpdatePw"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:text="@string/updatepassword"
+        android:textSize="19dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/register_button_bg" />
+
+    <Button
+        android:id="@+id/buttonChCancel"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:text="@string/cancel"
+        android:textSize="20dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="210dp"
+        android:background="@drawable/cancel_button_bg" />
+
+
+</FrameLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextRName"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/rname"
+        android:textAlignment="center"
+        android:textColorHint="@color/dark_grey" />
+
+    <RadioButton
+        android:id="@+id/radioButtonRGenderMale"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="90dp"
+        android:textColorHint="@color/dark_grey"
+        android:text="@string/rmale"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonRGenderFemale"
+        android:layout_width="125dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="90dp"
+        android:textSize="20dp"
+        android:textColorHint="@color/dark_grey"
+        android:text="@string/rfemale"
+        />
+
+    <EditText
+        android:id="@+id/editTextRIC"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="130dp"
+        android:textColorHint="@color/dark_grey"
+        android:ems="10"
+        android:textSize="20dp"
+        android:inputType="text"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/rIC"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextRPhoneNum"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="190dp"
+        android:textColorHint="@color/dark_grey"
+        android:ems="10"
+        android:inputType="phone"
+        android:textSize="20dp"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/rphonenum"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:textSize="20dp"
+        android:textColorHint="@color/dark_grey"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/remail"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextRUsername"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"
+        android:textColorHint="@color/dark_grey"
+        android:ems="10"
+        android:inputType="text"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/username"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextRPassword"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/password"
+        android:textAlignment="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="370dp"
+        android:textSize="20dp"
+        android:textColorHint="@color/dark_grey"
+        />
+
+    <EditText
+        android:id="@+id/editTextRRetypePassword"
+        android:layout_width="312dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/rretypepassword"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="430dp"
+        android:textColorHint="@color/dark_grey"
+         />
+
+    <Button
+        android:id="@+id/buttonRRegister"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:text="@string/rregister"
+        android:background="@drawable/register_button_bg"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="500dp"
+        android:textColorHint="@color/dark_grey"
+         />
+
+    <Button
+        android:id="@+id/buttonRCancel"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:text="@string/cancel"
+        android:background="@drawable/cancel_button_bg"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="500dp"
+        android:textColorHint="@color/dark_grey" />
+
+</FrameLayout>

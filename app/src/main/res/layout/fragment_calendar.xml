@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="320dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loan:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accumulated Interest:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining Amount:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Payment:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loan:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerLoan"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="350dp"
+        />
+
+    <TextView
+        android:id="@+id/editTextAccInterest"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="390dp"
+        android:background="@color/light_grey"
+        android:ems="10"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/editTextRemainingAmount"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="430dp"
+        android:background="@color/light_grey"
+        android:ems="10"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/editTextTotalPayment"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="470dp"
+        android:background="@color/light_grey"
+        android:ems="10"
+        android:textSize="20dp"
+        />
+
+</FrameLayout>

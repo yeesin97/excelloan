@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
+        android:text="Name: "
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="86dp"
+        android:text="Gender: "
+        android:textSize="18dp"
+        android:textColor="@color/black"
+         />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="136dp"
+        android:textSize="18dp"
+        android:text="NRIC: "
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/textinput"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="82dp"
+        android:textSize="18dp"
+        android:text="Male"
+        />
+
+    <RadioButton
+        android:id="@+id/radioButtonFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="82dp"
+        android:textSize="18dp"
+        android:text="Female"
+        />
+
+    <EditText
+        android:id="@+id/editTextBorrowerIC"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="   800808075088"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/textinput"
+        android:inputType="date"
+         />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="186dp"
+        android:textColor="@color/black"
+        android:text="Age: "
+        android:textSize="18dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextBAge"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_marginTop="182dp"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/textinput"
+         />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="236dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Address: "
+        />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/textinput"
+        android:inputType="textPostalAddress"
+        android:textColor="@color/black"
+         />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="286dp"
+        android:text="Phone No.: "
+        android:textColor="@color/black"
+        android:textSize="18dp"
+         />
+
+    <EditText
+        android:id="@+id/editTextPhoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="282dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/textinput"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:layout_marginLeft="20dp"
+        android:text="Email Address: "
+        android:textColor="@color/black"
+        android:textSize="18dp"
+       />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:layout_marginTop="332dp"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/textinput"
+        android:inputType="textEmailAddress"
+       />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="386dp"
+        android:text="Nationality: "
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerNationality"
+        android:layout_width="214dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="382dp"
+        />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="475dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="24dp"
+        android:padding="15dp"
+        android:text="Next"
+        android:background="@color/colorPrimaryLight"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+</FrameLayout>
