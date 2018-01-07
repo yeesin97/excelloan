@@ -51,7 +51,6 @@ public class TermsAndConditionFragment extends Fragment {
                 if (chkAgree.isChecked())
                 {
 
-
                     Bundle b = getArguments();
 
                     String name= b.getString("name");
@@ -82,9 +81,16 @@ public class TermsAndConditionFragment extends Fragment {
                     car.setCarPlate(car_plate);
                     car.setModel(car_model);
 
+                    Loan loan = new Loan();
+                    loan.setUserID(name);
+                    loan.setLoanMonthlyIncome(Double.parseDouble(income));
+                    loan.setLoanMonthlyExpenses(Double.parseDouble(expense));
+                    loan.setLoanID("L000005");
+                    loan.setLoanStatus('P');
+
 
                     try {
-                        makeServiceCall(getActivity() , "https://excelloan.000webhostapp.com/insert_loan.php" , car);
+                        makeServiceCall(getActivity() , "https://excelloan.000webhostapp.com/insert_loan.php" , loan);
                     } catch (Exception e) {
                         e.printStackTrace();
                         Toast. makeText (getActivity(), "Error: " + e.getMessage(),
@@ -112,8 +118,8 @@ public class TermsAndConditionFragment extends Fragment {
         return view;
     }
 
-    public void makeServiceCall(Context context, String url, final Car
-            car) {
+    public void makeServiceCall(Context context, String url, final Loan
+            loan) {
         //mPostCommentResponse.requestStarted();
         RequestQueue queue = Volley. newRequestQueue (context);
         //Send data
@@ -149,14 +155,29 @@ public class TermsAndConditionFragment extends Fragment {
                                     error.toString(), Toast. LENGTH_LONG ).show();
                         }
                     }) {
+
+//                @Override
+//                protected Map<String, String> getParams() {
+//                    Map<String, String> params = new HashMap<>();
+//                    params.put( "carPlate" , car.getCarPlate());
+//                    params.put( "carBrand" , car.getCarBrand());
+//                    params.put( "model" , car.getModel());
+//                    return params;
+//                }
+
+
                 @Override
-                protected Map<String, String> getParams() {
+                protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
-                    params.put( "carPlate" , car.getCarPlate());
-                    params.put( "carBrand" , car.getCarBrand());
-                    params.put( "model" , car.getModel());
+                    params.put("loanID", loan.getLoanID());
+                    params.put("userID", loan.getUserID());
+                    params.put("loanStatus", String.valueOf(loan.getLoanStatus()));
+                    params.put("loanMonthlyIncome", String.valueOf(loan.getLoanMonthlyIncome()));
+                    params.put("loanMonthlyExpenses", String.valueOf(loan.getLoanMonthlyExpenses()));
                     return params;
                 }
+
+
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError
                 {
