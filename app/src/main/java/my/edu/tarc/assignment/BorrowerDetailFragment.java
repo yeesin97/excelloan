@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 /**
@@ -22,7 +23,8 @@ import android.widget.Toast;
  */
 
 public class BorrowerDetailFragment extends Fragment{
-    EditText custName, custIC;
+    EditText editTextCustName, editTextCustIC, editTextCustAge, editTextCustEmail, editTextCustAddr, editTextCustPhoneNum;
+    RadioButton radioButtonCustMale, radioButtonCustFemale;
     public BorrowerDetailFragment() {
 
     }
@@ -31,8 +33,14 @@ public class BorrowerDetailFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_borrower_detail, container, false);
-        custName = (EditText)view.findViewById(R.id.editTextName);
-        custIC = (EditText)view.findViewById(R.id.editTextBorrowerIC);
+        editTextCustName = (EditText)view.findViewById(R.id.editTextName);
+        editTextCustIC = (EditText)view.findViewById(R.id.editTextBorrowerIC);
+        editTextCustAge = (EditText)view.findViewById(R.id.editTextBAge);
+        editTextCustAddr = (EditText)view.findViewById(R.id.editTextBAddress);
+        editTextCustEmail = (EditText)view.findViewById(R.id.editTextBEmail);
+        editTextCustPhoneNum = (EditText)view.findViewById(R.id.editTextBPhoneNum);
+        radioButtonCustFemale = (RadioButton)view.findViewById(R.id.radioButtonBFemale);
+        radioButtonCustMale = (RadioButton)view.findViewById(R.id.radioButtonBMale);
         Button btnNext = (Button) view.findViewById(R.id.buttonNext);
 
 
@@ -40,14 +48,24 @@ public class BorrowerDetailFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 Bundle b = new Bundle();
-                String name = custName.getText().toString();
-                String IC = custIC.getText().toString();
+                String name = editTextCustName.getText().toString();
+                String IC = editTextCustIC.getText().toString();
+                int age = Integer.parseInt(editTextCustAge.getText().toString());
+                String address = editTextCustAddr.getText().toString();
+                String phoneNum = editTextCustPhoneNum.getText().toString();
+                char gender = 'F';
+
+
 
                 SpouseFragment sf = new SpouseFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
 
-                b.putString("name", name);
-                b.putString("ic", IC);
+//                b.putString("c_name", name);
+//                b.putString("c_ic", IC);
+//                b.putInt("c_age", age);
+//                b.putString("c_address", address);
+//                b.putString("c_phoneNum", phoneNum);
+//                b.putChar("c_gender", gender);
 
                 sf.setArguments(b);
 

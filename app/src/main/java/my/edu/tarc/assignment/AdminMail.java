@@ -22,7 +22,7 @@ import java.util.List;
 public class AdminMail extends Fragment {
 
     ListView listView;
-    TextView userName, userIC, userPhoneNum, userEmailAddr, monthlyIncome, monthlyExpense, spouseName, spouseIC, spousePhoneNum, spouseNetIncome,carBrand, carPlate, carModel, netCarPrice, downpayment, loanApplied;
+    TextView textViewuserName, textViewuserIC, textViewuserPhoneNum, textViewuserEmailAddr, textViewmonthlyIncome, textViewmonthlyExpense, textViewspouseName, textViewspouseIC, textViewspousePhoneNum, textViewspouseNetIncome,textViewcarBrand, textViewcarPlate, textViewcarModel, textViewnetCarPrice, textViewdownpayment, textViewloanApplied;
     Button btnApprove, btnReject;
 
     @Nullable
@@ -31,39 +31,38 @@ public class AdminMail extends Fragment {
 
         View rowView = inflater.inflate(R.layout.fragment_admin_mail, container, false);
 
+        textViewuserName = (TextView) rowView.findViewById(R.id.textViewMName);
+        textViewuserIC = (TextView)rowView.findViewById(R.id.textViewMIC);
+        textViewuserPhoneNum = (TextView)rowView.findViewById(R.id.textViewMPhoneNum);
+        textViewuserEmailAddr = (TextView)rowView.findViewById(R.id.textViewMEmailAddr);
+        textViewmonthlyIncome = (TextView)rowView.findViewById(R.id.textViewMMonthlyIncome);
+        textViewmonthlyExpense = (TextView)rowView.findViewById(R.id.textViewMMonthlyExpense);
 
-        userName = (TextView) rowView.findViewById(R.id.textViewMName);
-        userIC = (TextView)rowView.findViewById(R.id.textViewMIC);
-        userPhoneNum = (TextView)rowView.findViewById(R.id.textViewMPhoneNum);
-        userEmailAddr = (TextView)rowView.findViewById(R.id.textViewMEmailAddr);
-        monthlyIncome = (TextView)rowView.findViewById(R.id.textViewMMonthlyIncome);
-        monthlyExpense = (TextView)rowView.findViewById(R.id.textViewMMonthlyExpense);
+        textViewspouseName = (TextView)rowView.findViewById(R.id.textViewMSName);
+        textViewspouseIC = (TextView)rowView.findViewById(R.id.textViewMSIC);
+        textViewspousePhoneNum = (TextView)rowView.findViewById(R.id.textViewMSPhoneNum);
+        textViewspouseNetIncome = (TextView)rowView.findViewById(R.id.textViewMSNetIncome);
 
-        spouseName = (TextView)rowView.findViewById(R.id.textViewMSName);
-        spouseIC = (TextView)rowView.findViewById(R.id.textViewMSIC);
-        spousePhoneNum = (TextView)rowView.findViewById(R.id.textViewMSPhoneNum);
-        spouseNetIncome = (TextView)rowView.findViewById(R.id.textViewMSNetIncome);
-
-        carBrand = (TextView)rowView.findViewById(R.id.textViewMCarBrand);
-        carPlate = (TextView)rowView.findViewById(R.id.textViewMCarPlate);
-        carModel = (TextView)rowView.findViewById(R.id.textViewMCarModel);
-        netCarPrice = (TextView)rowView.findViewById(R.id.textViewMNetCarPrice);
-        downpayment = (TextView)rowView.findViewById(R.id.textViewMDownpayment);
-        loanApplied = (TextView)rowView.findViewById(R.id.textViewMLoanApplied);
+        textViewcarBrand = (TextView)rowView.findViewById(R.id.textViewMCarBrand);
+        textViewcarPlate = (TextView)rowView.findViewById(R.id.textViewMCarPlate);
+        textViewcarModel = (TextView)rowView.findViewById(R.id.textViewMCarModel);
+        textViewnetCarPrice = (TextView)rowView.findViewById(R.id.textViewMNetCarPrice);
+        textViewdownpayment = (TextView)rowView.findViewById(R.id.textViewMDownpayment);
+        textViewloanApplied = (TextView)rowView.findViewById(R.id.textViewMLoanApplied);
 
         btnApprove = (Button)rowView.findViewById(R.id.btnApprove);
         btnReject = (Button)rowView.findViewById(R.id.btnReject);
 
         Bundle b = getArguments();
 
-        String name= b.getString("name");
-        String IC = b.getString("ic");
+        String name= b.getString("c_name");
+        String IC = b.getString("c_ic");
 
         String spouse_name = b.getString("s_name");
         String spouse_ic = b.getString("s_ic");
 
-        String income = b.getString("income");
-        String expense = b.getString("expense");
+        Double income = b.getDouble("income");
+        Double expense = b.getDouble("expense");
 
 
         String car_plate = b.getString("carplate");
@@ -71,28 +70,19 @@ public class AdminMail extends Fragment {
         String car_model = b.getString("carmodel");
 
 
+        textViewuserName.setText(name);
+        textViewuserIC.setText(IC);
 
-        userName.setText(name);
-        userIC.setText(IC);
+        textViewspouseName.setText(spouse_name);
+        textViewspouseIC.setText(spouse_ic);
 
-        spouseName.setText(spouse_name);
-        spouseIC.setText(spouse_ic);
+        textViewmonthlyIncome.setText(String.valueOf(income));
+        textViewmonthlyExpense.setText(String.valueOf(expense));
 
-        monthlyIncome.setText(income);
-        monthlyExpense.setText(expense);
+        textViewcarPlate.setText(car_plate);
+        textViewcarBrand.setText(car_brand);
+        textViewcarModel.setText(car_model);
 
-        carPlate.setText(car_plate);
-        carBrand.setText(car_brand);
-        carModel.setText(car_model);
-//        TextView textViewCode, textViewTitle, textViewCredit;
-//        textViewCode = (TextView)rowView.findViewById(R.id.textViewCode);
-//        textViewTitle = (TextView)rowView.findViewById(R.id.textViewTitle);
-//        textViewCredit = (TextView)rowView.findViewById(R.id.textViewCredit);
-//        textViewCode.setText(textViewCode.getText() + ":" +course.getCode());
-//        textViewTitle.setText(textViewTitle.getText() + ":" +
-//                course.getTitle());
-//        textViewCredit.setText(textViewCredit.getText() + ":" +
-//                course.getCredit());
         return rowView;
     }
 }

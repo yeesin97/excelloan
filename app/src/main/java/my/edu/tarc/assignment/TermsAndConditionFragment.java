@@ -50,44 +50,80 @@ public class TermsAndConditionFragment extends Fragment {
             public void onClick(View view) {
                 if (chkAgree.isChecked())
                 {
-
                     Bundle b = getArguments();
 
-                    String name= b.getString("name");
-                    String IC = b.getString("ic");
-                    b.putString("name", name);
-                    b.putString("ic", IC);
+//                    String custName= b.getString("c_name");
+//                    String custIC = b.getString("c_ic");
+//                    b.putString("name", custName);
+//                    b.putString("ic", custIC);
+
+
+                    String custName = "ariellim12";
 
                     String spouseName = b.getString("s_name");
-                    String spouseIC = b.getString("s_ic");
-                    b.putString("s_name", spouseName);
-                    b.putString("s_ic", spouseIC);
+                    String spouseIc = b.getString("s_ic");
+                    int spouseAge = b.getInt("s_age");
+                    String spouseAddr = b.getString("s_addr");
+                    String spousePhoneNum = b.getString("s_phoneNum");
+                    String spouseEmail = b.getString("s_email");
+                    double spouseNetIncome = b.getDouble("s_netincome");
+                    char spouseRelationship = b.getChar("s_relationship");
+                    char spouseGender = b.getChar("s_gender");
 
-                    String income = b.getString("income");
-                    b.putString("income", income);
-                    String expense = b.getString("expense");
-                    b.putString("expense", expense);
+                    Double totalIncome = b.getDouble("income");
+                    Double totalExpense = b.getDouble("expense");
 
                     String car_plate = b.getString("carplate");
                     String car_brand = b.getString("carbrand");
                     String car_model = b.getString("carmodel");
+                    int car_year = b.getInt("caryear");
+                    char vehicle_classification = b.getChar("classification");
+
+                    b.putString("s_name", spouseName);
+                    b.putString("s_ic", spouseIc);
+                    b.putInt("s_age", spouseAge);
+                    b.putString("s_addr", spouseAddr);
+                    b.putString("s_phoneNum", spousePhoneNum);
+                    b.putString("s_email", spouseEmail);
+                    b.putDouble("s_netincome", spouseNetIncome);
+                    b.putChar("s_relationship", spouseRelationship);
+                    b.putChar("s_gender", spouseGender);
+
+                    b.putDouble("income", totalIncome);
+                    b.putDouble("expense", totalExpense);
+
                     b.putString("carplate", car_plate);
                     b.putString("carbrand", car_brand);
                     b.putString("carmodel", car_model);
+                    b.putInt("caryear", car_year);
+                    b.putChar("classification", vehicle_classification);
+
 
                     Car car = new Car();
-
                     car.setCarBrand(car_brand);
                     car.setCarPlate(car_plate);
                     car.setModel(car_model);
+                    car.setYear(car_year);
+                    car.setClassification(vehicle_classification);
 
                     Loan loan = new Loan();
-                    loan.setUserID(name);
-                    loan.setLoanMonthlyIncome(Double.parseDouble(income));
-                    loan.setLoanMonthlyExpenses(Double.parseDouble(expense));
-                    loan.setLoanID("L000005");
+                    loan.setUserID(custName);
+                    loan.setLoanMonthlyIncome(totalIncome);
+                    loan.setLoanMonthlyExpenses(totalExpense);
+                    loan.setLoanID("L000007");
                     loan.setLoanStatus('P');
+                    loan.setGuarantorIC(spouseIc);
+                    loan.setCarPlate(car_plate);
 
+                    CoGuarantor coGuarantor = new CoGuarantor();
+                    coGuarantor.setgName(spouseName);
+                    coGuarantor.setgIC(spouseIc);
+                    coGuarantor.setRelationship(spouseRelationship);
+                    coGuarantor.setgAge(spouseAge);
+                    coGuarantor.setgAddress(spouseAddr);
+                    coGuarantor.setgPhoneNum(spousePhoneNum);
+                    coGuarantor.setgEmail(spouseEmail);
+                    coGuarantor.setgNetIncome(spouseNetIncome);
 
                     try {
                         makeServiceCall(getActivity() , "https://excelloan.000webhostapp.com/insert_loan.php" , loan);

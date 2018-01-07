@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by User on 25/12/2017.
@@ -43,31 +43,6 @@ public class BorrowerFinancialFragment extends Fragment {
         //totalExpense = Double.parseDouble(editTextHouseholdE.getText().toString()) + Double.parseDouble(editTextRentalE.getText().toString()) + Double.parseDouble(editTextOtherE.getText().toString());
 
 
-
-        editTextBonus.addTextChangedListener(new TextWatcher() {
-
-
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                 //totalIncome= Double.parseDouble(editTextIncome.getText().toString()) + Double.parseDouble(editTextBonus.getText().toString());
-                /////totalExpense =  Double.parseDouble(editTextHouseholdE.getText().toString()) + Double.parseDouble(editTextRentalE.getText().toString() + Double.parseDouble(editTextOtherE.getText().toString()));
-
-                //textViewTotalIncome.setText(String.valueOf(totalIncome));
-                //////textViewTotalExpenses.setText();
-            }
-        });
-
         Button btnNext = (Button)view.findViewById(R.id.buttonBFNext);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,29 +50,115 @@ public class BorrowerFinancialFragment extends Fragment {
 
                 double totalIncome = 0.0;
                 double totalExpense =  0.0;
+                double income, bonus, householdexp, rentalexp, otherexp;
 
-                totalIncome= Double.parseDouble(editTextIncome.getText().toString()) + Double.parseDouble(editTextBonus.getText().toString());
-                totalExpense =  Double.parseDouble(editTextHouseholdE.getText().toString()) + Double.parseDouble(editTextRentalE.getText().toString() + Double.parseDouble(editTextOtherE.getText().toString()));
+                if(TextUtils.isEmpty(editTextIncome.getText().toString())){
+                    editTextIncome.setError("The fields cannot be blank");
+                    return;
+                }
+                else if(TextUtils.isEmpty(editTextRentalE.getText().toString())){
+                    editTextRentalE.setError("The fields cannot be blank");
+                    return;
+                }
+                else if(TextUtils.isEmpty(editTextHouseholdE.getText().toString())){
+                    editTextHouseholdE.setError("The fields cannot be blank");
+                    return;
+                }
+                else if(TextUtils.isEmpty(editTextBonus.getText().toString()) && TextUtils.isEmpty(editTextOtherE.getText().toString())){
+                    income = Double.parseDouble(editTextIncome.getText().toString());
 
+                    householdexp = Double.parseDouble(editTextHouseholdE.getText().toString());
+                    rentalexp = Double.parseDouble(editTextRentalE.getText().toString());
+
+                    totalIncome =  income;
+                    totalExpense =  householdexp +  rentalexp;
+
+                    textViewTotalIncome.setText(String.valueOf(totalIncome));
+                    textViewTotalExpenses.setText(String.valueOf(totalExpense));
+                }
+                else if(TextUtils.isEmpty(editTextOtherE.getText().toString())){
+
+                    income = Double.parseDouble(editTextIncome.getText().toString());
+                    bonus = Double.parseDouble(editTextBonus.getText().toString());
+                    householdexp = Double.parseDouble(editTextHouseholdE.getText().toString());
+                    rentalexp = Double.parseDouble(editTextRentalE.getText().toString());
+
+                    totalIncome =  income + bonus;
+                    totalExpense =  householdexp +  rentalexp;
+
+                    textViewTotalIncome.setText(String.valueOf(totalIncome));
+                    textViewTotalExpenses.setText(String.valueOf(totalExpense));
+                }
+                else if(TextUtils.isEmpty(editTextBonus.getText().toString())){
+                    income = Double.parseDouble(editTextIncome.getText().toString());
+
+                    householdexp = Double.parseDouble(editTextHouseholdE.getText().toString());
+                    rentalexp = Double.parseDouble(editTextRentalE.getText().toString());
+                    otherexp = Double.parseDouble(editTextOtherE.getText().toString());
+
+                    totalIncome =  income;
+                    totalExpense =  householdexp +  rentalexp + otherexp;
+
+                    textViewTotalIncome.setText(String.valueOf(totalIncome));
+                    textViewTotalExpenses.setText(String.valueOf(totalExpense));
+                }
+                else {
+                    income = Double.parseDouble(editTextIncome.getText().toString());
+                    bonus = Double.parseDouble(editTextBonus.getText().toString());
+                    householdexp = Double.parseDouble(editTextHouseholdE.getText().toString());
+                    rentalexp = Double.parseDouble(editTextRentalE.getText().toString());
+                    otherexp = Double.parseDouble(editTextOtherE.getText().toString());
+
+                    totalIncome = income + bonus;
+                    totalExpense = householdexp + rentalexp + otherexp;
+
+                    textViewTotalIncome.setText(String.valueOf(totalIncome));
+                    textViewTotalExpenses.setText(String.valueOf(totalExpense));
+                }
 
                 Bundle b = getArguments();
 
-                String name= b.getString("name");
-                String IC = b.getString("ic");
-                b.putString("name", name);
-                b.putString("ic", IC);
+//                String custName = b.getString("c_name");
+//                String custIc = b.getString("c_ic");
+//                int custAge = b.getInt("c_age");
+//                String custAddr = b.getString("c_addr");
+//                String custPhoneNum = b.getString("c_phoneNum");
+//                String custEmail = b.getString("c_email");
+//                char custGender = b.getChar("c_gender");
 
                 String spouseName = b.getString("s_name");
-                String spouseIC = b.getString("s_ic");
+                String spouseIc = b.getString("s_ic");
+                int spouseAge = b.getInt("s_age");
+                String spouseAddr = b.getString("s_addr");
+                String spousePhoneNum = b.getString("s_phoneNum");
+                String spouseEmail = b.getString("s_email");
+                double spouseNetIncome = b.getDouble("s_netincome");
+                char spouseRelationship = b.getChar("s_relationship");
+                char spouseGender = b.getChar("s_gender");
+
+
+                //put into bundle
+
+//                b.putString("c_name", custName);
+//                b.putString("c_ic", custIc);
+//                b.putInt("c_age", custAge);
+//                b.putString("c_addr", custAddr);
+//                b.putString("c_phoneNum", custPhoneNum);
+//                b.putString("c_email", custEmail);
+//                b.putChar("c_gender", custGender);
+
                 b.putString("s_name", spouseName);
-                b.putString("s_ic", spouseIC);
+                b.putString("s_ic", spouseIc);
+                b.putInt("s_age", spouseAge);
+                b.putString("s_addr", spouseAddr);
+                b.putString("s_phoneNum", spousePhoneNum);
+                b.putString("s_email", spouseEmail);
+                b.putDouble("s_netincome", spouseNetIncome);
+                b.putChar("s_relationship", spouseRelationship);
+                b.putChar("s_gender", spouseGender);
 
-                b.putDouble("income", totalIncome);
-                b.putDouble("expense", totalExpense);
-
-
-                //AdminMail mail = new AdminMail();
-                //mail.setArguments(b);
+                    b.putDouble("income", totalIncome);
+                    b.putDouble("expense", totalExpense);
 
                 LoanApplicationFragment laf = new LoanApplicationFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
@@ -105,6 +166,7 @@ public class BorrowerFinancialFragment extends Fragment {
                 laf.setArguments(b);
                 ft.addToBackStack(null);
                 ft.commit();
+
             }
         });
 

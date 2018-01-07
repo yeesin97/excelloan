@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="132dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:text="Spouse"
         />
 
@@ -50,9 +50,9 @@
         android:id="@+id/radioButtonSGuarantor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="290dp"
+        android:layout_marginLeft="280dp"
         android:layout_marginTop="132dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:text="Co-guarantor"
         />
 
@@ -213,7 +213,7 @@
         android:textColor="@color/black"/>
 
     <EditText
-        android:id="@+id/editTextNetIncome"
+        android:id="@+id/editTextSNetIncome"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="432dp"

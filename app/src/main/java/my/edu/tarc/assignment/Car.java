@@ -8,15 +8,18 @@ public class Car {
     private String carPlate ;
     private String carBrand ;
     private String model ;
+    private int year;
+    private char classification;
     //private int year;
 
     public Car() {
     }
+
     public Car(String carPlate, String carBrand, String model, int year) {
         this.carPlate = carPlate;
         this.carBrand = carBrand;
         this.model = model;
-        //this.year = year;
+        this.year = year;
     }
 
     public String getCarPlate()
@@ -45,7 +48,23 @@ public class Car {
         this.model = model;
     }
 
-   // public int getYear() {
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public char getClassification() {
+        return classification;
+    }
+
+    public void setClassification(char classification) {
+        this.classification = classification;
+    }
+
+    // public int getYear() {
        // return year ;
     //}
 

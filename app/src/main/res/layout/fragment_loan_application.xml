@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,14 +28,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="325dp"
-        android:text="0001"
+        android:text="000006"
         android:textSize="18dp"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Car Detail"
+         android:layout_marginTop="50dp"
+         android:layout_marginLeft="10dp"
+         android:textSize="20dp"
+         android:textColor="@color/black"
+         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
         android:textSize="20dp"
         android:text="Car Price (RM):"
         android:textColor="@color/black"
@@ -38,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="85dp"
         android:textAlignment="center"
         android:background="@drawable/textinput"
         android:ems="10"
@@ -48,8 +66,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="140dp"
         android:textSize="17dp"
         android:text="Downpayment (RM):"
         android:textColor="@color/black"
@@ -60,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="135dp"
         android:textAlignment="center"
         android:background="@drawable/textinput"
         android:ems="10"
@@ -68,22 +86,11 @@
          />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="170dp"
-        android:text="Loan Amount (RM):"
-        android:textSize="18dp"
-        android:textColor="@color/black"
-         />
-
-    <TextView
         android:id="@+id/textView3a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="190dp"
         android:text="Car Plate No:"
         android:textSize="20dp"
         android:textColor="@color/black"
@@ -94,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="215dp"
+        android:layout_marginTop="185dp"
         android:background="@drawable/textinput"
         android:ems="10"
         android:textAlignment="center"
@@ -105,31 +112,30 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="240dp"
         android:text="Car Brand:"
         android:textSize="20dp"
         android:textColor="@color/black"
          />
 
-    <EditText
-        android:id="@+id/editTextCarBrand"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="265dp"
-        android:background="@drawable/textinput"
-        android:textSize="20dp"
-        android:ems="10"
-        android:textAlignment="center"
-        android:inputType="text"/>
+     <Spinner
+         android:id="@+id/spinnerCarBrand"
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:layout_marginLeft="190dp"
+         android:layout_marginTop="235dp"
+         android:textAlignment="center"
+         android:entries="@array/carBrand">
+     </Spinner>
+
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="290dp"
         android:textSize="20dp"
         android:text="Car Model:"
         android:textColor="@color/black"
@@ -140,7 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="315dp"
+        android:layout_marginTop="285dp"
         android:textAlignment="center"
         android:ems="10"
         android:background="@drawable/textinput"
@@ -149,19 +155,21 @@
         />
 
     <Spinner
-        android:id="@+id/spinnerYear"
-        android:layout_width="211dp"
+        android:id="@+id/spinnerCarYear"
+        android:layout_width="200dp"
         android:layout_height="31dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="365dp"
+        android:layout_marginTop="335dp"
+        android:textAlignment="center"
+        android:entries="@array/carYear"
          />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="390dp"
         android:text="Vehicle"
         android:textColor="@color/black"
         android:textSize="20dp" />
@@ -170,8 +178,8 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="445dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="415dp"
         android:textColor="@color/black"
         android:textSize="19dp"
         android:text="Classification:"
@@ -182,7 +190,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="385dp"
         android:textSize="18dp"
         android:text="Brand New"
          />
@@ -192,43 +200,93 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="445dp"
+        android:layout_marginTop="415dp"
         android:text="Used"
         android:textSize="18dp"
-         />
-
-    <Button
-        android:id="@+id/buttonLANext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="505dp"
-        android:layout_marginLeft="160dp"
-        android:textSize="24dp"
-        android:padding="15dp"
-        android:text="Next"
-        android:background="@color/colorPrimaryLight"
-        style="?android:attr/borderlessButtonStyle"
          />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="340dp"
         android:text="Year:"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
+    <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="10dp"
+         android:layout_marginTop="465dp"
+         android:text="Loan Apply"
+         android:textSize="20dp"
+         android:textColor="@color/black"
+         android:textStyle="bold"/>
+
+    <Button
+          android:id="@+id/buttonLANext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="600dp"
+          android:layout_marginLeft="160dp"
+          android:textSize="24dp"
+          android:padding="15dp"
+          android:text="Next"
+          android:background="@color/colorPrimaryLight"
+          style="?android:attr/borderlessButtonStyle"
+          />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="505dp"
+        android:text="Loan Amount (RM):"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editTextLLoanAmount"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginLeft="190dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="500dp"
         android:background="@drawable/textinput"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textAlignment="center" />
 
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="20dp"
+         android:layout_marginTop="555dp"
+         android:text="Loan Term:"
+         android:textColor="@color/black"
+         android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerLALoanTerm"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="550dp"
+        android:textAlignment="center"
+        android:entries="@array/loanTerm"
+        ></Spinner>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="years"
+           android:layout_marginLeft="320dp"
+           android:layout_marginTop="555dp"
+           android:textSize="18dp"/>
+
+        </FrameLayout>
+    </ScrollView>
 </FrameLayout>

@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="50dp"
                 android:textSize="18dp" />
 
@@ -49,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="260dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="50dp"
                 android:textSize="18dp" />
 
@@ -64,6 +66,7 @@
                 android:id="@+id/textViewMPhoneNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="80dp"
                 android:textSize="18dp" />
@@ -80,6 +83,7 @@
                 android:id="@+id/textViewMEmailAddr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="110dp"
                 android:textSize="18dp" />
@@ -94,9 +98,11 @@
 
             <TextView
                 android:id="@+id/textViewMMonthlyIncome"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="200dp"
+                android:textSize="18dp"
                 android:layout_marginTop="140dp" />
 
             <TextView
@@ -109,13 +115,16 @@
 
             <TextView
                 android:id="@+id/textViewMMonthlyExpense"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="200dp"
+                android:textSize="18dp"
                 android:layout_marginTop="170dp" />
 
 
             <TextView
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -135,6 +144,7 @@
                 android:id="@+id/textViewMSName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="240dp"
                 android:textSize="18dp" />
@@ -151,6 +161,7 @@
                 android:id="@+id/textViewMSIC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="260dp"
                 android:layout_marginTop="240dp" />
 
@@ -166,6 +177,7 @@
                 android:id="@+id/textViewMSPhoneNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="270dp" />
 
@@ -182,6 +194,7 @@
                 android:id="@+id/textViewMSNetIncome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="300dp" />
 
@@ -194,6 +207,7 @@
                 android:textSize="20dp" />
 
             <TextView
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -205,6 +219,7 @@
                 android:id="@+id/textViewMCarBrand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="110dp"
                 android:layout_marginTop="370dp"
                 android:textSize="18dp" />
@@ -221,6 +236,7 @@
                 android:id="@+id/textViewMCarModel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginTop="370dp"
                 android:layout_marginLeft="300dp"
                 android:textSize="18dp"/>
@@ -237,6 +253,7 @@
                 android:id="@+id/textViewMCarPlate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginTop="400dp"
                 android:layout_marginLeft="200dp"
                 android:textSize="18dp"
@@ -255,6 +272,7 @@
                 android:id="@+id/textViewMNetCarPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="430dp"
                 android:textSize="18dp"/>
@@ -271,6 +289,7 @@
                 android:id="@+id/textViewMDownpayment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="460dp"
                 android:textSize="18dp"/>
@@ -287,15 +306,42 @@
                 android:id="@+id/textViewMLoanApplied"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="490dp"
                 android:textSize="18dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loan Offered"
+                android:layout_marginTop="540dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:layout_marginLeft="180dp"
+                android:textAlignment="center"
+                android:entries="@array/loanPercent">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="20dp"
+                android:layout_marginTop="540dp"
+                android:layout_marginLeft="240dp"/>
 
             <Button
                 android:id="@+id/btnReject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="540dp"
+                android:layout_marginTop="590dp"
                 android:layout_marginLeft="80dp"
                 android:padding="10dp"
                 android:textSize="20dp"
@@ -306,7 +352,7 @@
                 android:id="@+id/btnApprove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="540dp"
+                android:layout_marginTop="590dp"
                 android:layout_marginLeft="220dp"
                 android:padding="10dp"
                 android:textSize="20dp"
