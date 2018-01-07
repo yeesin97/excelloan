@@ -118,6 +118,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_view_car_loan) {
 
         } else if (id == R.id.nav_language) {
+            ReportFragment rp = new ReportFragment();
+            ft.replace(R.id.frame_container, rp);
+            ft.addToBackStack(null);
+            ft.commit();
 
         } else if (id == R.id.nav_logout) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
