@@ -1,78 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
 
     <TextView
         android:id="@+id/listCarPlate"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:text="Car Plate"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/listModel"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="10dp"
-        android:text="Model"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/listBorrowing"
-        android:layout_width="65dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="10dp"
-        android:text="Borrowing"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/listYear"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginLeft="240dp"
-        android:layout_marginTop="10dp"
-        android:text="Duration"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/listRepayment"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:textAlignment="center"
         android:gravity="center"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="10dp"
-        android:text="Repayment"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-    <ListView
-        android:id="@+id/MyListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="40dp"/>
-
-
-</FrameLayout>
+</android.support.constraint.ConstraintLayout>
