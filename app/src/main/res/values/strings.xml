@@ -130,4 +130,7 @@ any.</string>
         <item>MITSUBITSHI</item>
     </string-array>
 
+    <string name="month">JAN</string>
+    <integer name="year">2016</integer>
+
 </resources>
